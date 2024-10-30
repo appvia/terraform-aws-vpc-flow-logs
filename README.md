@@ -1,10 +1,10 @@
 ![Github Actions](../../actions/workflows/terraform.yml/badge.svg)
 
-# Terraform <NAME>
+# Terraform AWS VPC Flow Logs
 
 ## Description
 
-Add a description of the module here
+A module to enable VPC flow logs on an aws vpc
 
 ## Usage
 
@@ -15,7 +15,8 @@ module "example" {
   source  = "appvia/terraform-aws-vpc-flow-logs/aws"
   version = "0.0.1"
 
-  # insert variables here
+  name   = "example-vpc-flow-logs"
+  vpc_id = "vpc-0123456789abcdef"
 }
 ```
 

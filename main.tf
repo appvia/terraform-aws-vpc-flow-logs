@@ -40,8 +40,11 @@ data "aws_iam_policy_document" "log" {
     ]
 
     resources = [
-      "*",
+      aws_cloudwatch_log_group.default.arn,
+      "${aws_cloudwatch_log_group.default.arn}:*"
     ]
+
+    conditions = {}
   }
 }
 

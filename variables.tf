@@ -5,7 +5,7 @@ variable "name" {
 
 variable "retention_in_days" {
   description = "Number of days to retain flow logs"
-  default     = 7
+  default     = 365
   type        = number
 }
 

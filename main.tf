@@ -44,7 +44,11 @@ data "aws_iam_policy_document" "log" {
       "${aws_cloudwatch_log_group.default.arn}:*"
     ]
 
-    conditions = {}
+    condition {
+      test     = "Bool"
+      variable = "aws:ViaAWSService"
+      values   = ["true"]
+    }
   }
 }
 
